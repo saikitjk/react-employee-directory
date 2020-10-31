@@ -1,8 +1,10 @@
-.header {
+.title {
   font-size: larger;
-  background-color: aquamarine;
+  background-color: skyblue;
 }
 
-.header h1 {
-  color: blue;
+.title h1 {
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
