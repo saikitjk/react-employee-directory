@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
-import mainArea from "../DataTable/dataTable";
+import Container from "../DataBody/databody";
 
 export default function mainBody() {
   return (
     <>
-      <mainArea />
+      <Container />
     </>
   );
 }
