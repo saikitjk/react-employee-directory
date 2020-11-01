@@ -91,14 +91,3 @@ function Container() {
 }
 
 export default Container;
-
-//API
-//   useEffect(() => {
-//     API.getUsers()
-//       .then((result) => {
-//         console.log("User data" + JSON.stringify(result.data.results[0].name));
-//         console.log("empState" + JSON.stringify(employeeState)); //All data
-//         setEmployeeState({ ...employeeState, users: result.data.results });
-//       })
-//       .catch((err) => console.log(err));
-//   }, []);

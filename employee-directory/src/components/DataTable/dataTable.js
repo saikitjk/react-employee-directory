@@ -1,4 +1,6 @@
 import React from "react";
+import Moment from "react-moment";
+import "./style.css";
 
 export default function dataTable(props) {
   return (
@@ -32,7 +34,9 @@ export default function dataTable(props) {
               <td className="email">
                 <a href={result.email}>{result.email}</a>
               </td>
-              <td>{result.dob.date}</td>
+              <td>
+                <Moment format="MMM D YYYY">{result.dob.date}</Moment>
+              </td>
               <td>{result.dob.age}</td>
             </tr>
           ))}
