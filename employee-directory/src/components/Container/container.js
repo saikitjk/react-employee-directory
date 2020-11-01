@@ -37,7 +37,7 @@ function Container() {
       const sorted = filtered.sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
-      empState.setState({
+      setEmpState({
         filteredEmp: sorted,
         order: "desc",
       });
@@ -45,7 +45,7 @@ function Container() {
       const sorted = filtered.sort((a, b) =>
         a.name.first > b.name.first ? -1 : 1
       );
-      empState.setState({
+      setEmpState({
         filteredEmp: sorted,
         order: "asc",
       });
@@ -59,7 +59,7 @@ function Container() {
       (employee) =>
         employee.name.first.toLowerCase().indexOf(UserInput.toLowerCase()) > -1
     );
-    this.setState({
+    setEmpState({
       filteredEmployees,
     });
   };
@@ -74,7 +74,7 @@ function Container() {
       employee.name.first.toLowerCase().includes(search.toLowerCase())
     );
 
-    this.setState({
+    setEmpState({
       filteredEmployees,
     });
   };
