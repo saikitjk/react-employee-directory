@@ -6,23 +6,23 @@ export default function dataTable(props) {
       <table className="empTable">
         <thead>
           <tr>
-            <th></th>
+            <th>Avater</th>
             <th onClick={props.sortByName}>Name</th>
+
             <th>Phone</th>
             <th>E-mail</th>
             <th>DOB</th>
+            <th>Age</th>
           </tr>
         </thead>
         <tbody className="tableBody">
           {props.results.map((result) => (
             <tr className="table" key={result.login.uuid}>
               <td>
-                {" "}
                 <img
-                  className="
-                        "
+                  className="avater"
                   src={result.picture.medium}
-                  alt=""
+                  alt={result.name + " " + result.name.last}
                 />
               </td>
 
@@ -33,6 +33,7 @@ export default function dataTable(props) {
                 <a href={result.email}>{result.email}</a>
               </td>
               <td>{result.dob.date}</td>
+              <td>{result.dob.age}</td>
             </tr>
           ))}
         </tbody>

@@ -11,25 +11,18 @@ function Container() {
     order: "",
     filteredEmp: [],
     search: "",
-    headings: [
-      { name: "profile" },
-      { name: "name" },
-      { name: "phone" },
-      { name: "email" },
-      { name: "dob" },
-    ],
   });
 
   useEffect(() => {
     API.getUsers().then((results) => {
-      console.log("console test 1" + results.data.results);
+      //console.log("console test 1" + results.data.results);
       setEmpState({
         ...empState,
         employees: results.data.results,
         filteredEmp: results.data.results,
       });
     });
-  }, []);
+  });
 
   function sortByName() {
     const filtered = empState.filteredEmp;
@@ -69,7 +62,9 @@ function Container() {
     if (!empState.search) {
       alert("Please enter an employee's name.");
     }
-    const { employees, search } = this.empState;
+    //const { employees, search } = this.empState;
+    const employees = empState.employees;
+    const search = empState.search;
     const filteredEmployees = employees.filter((employee) =>
       employee.name.first.toLowerCase().includes(search.toLowerCase())
     );
