@@ -11,18 +11,16 @@ export default function dataTable(props) {
           <tr>
             <th>Avater</th>
             <th onClick={props.sortByName}>Name</th>
-
+            <th onClick={props.sortByAge}>Age</th>
             <th>Phone</th>
             <th>E-mail</th>
             <th>DOB</th>
-            <th>Age</th>
           </tr>
         </thead>
-        <tbody className="">
+        <tbody className="tableBody">
           {props.results.map((result) => (
             <tr className="table" key={result.login.uuid}>
               <td>
-                {" "}
                 <img
                   className="avater"
                   src={result.picture.medium}
@@ -31,7 +29,7 @@ export default function dataTable(props) {
               </td>
 
               <td>{result.name.first + " " + result.name.last} </td>
-
+              <td>{result.dob.age}</td>
               <td>{result.cell}</td>
               <td className="email">
                 <a href={result.email}>{result.email}</a>
@@ -39,7 +37,6 @@ export default function dataTable(props) {
               <td>
                 <Moment format="MMM D YYYY">{result.dob.date}</Moment>
               </td>
-              <td>{result.dob.age}</td>
             </tr>
           ))}
         </tbody>

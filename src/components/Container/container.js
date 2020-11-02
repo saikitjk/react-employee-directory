@@ -29,7 +29,7 @@ class Container extends Component {
       const sorted = filtered.sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
-      console.log(sorted);
+      //console.log(sorted);
 
       this.setState({
         filteredEmp: sorted,
@@ -39,7 +39,28 @@ class Container extends Component {
       const sorted = filtered.sort((a, b) =>
         a.name.first > b.name.first ? -1 : 1
       );
-      console.log(sorted);
+      //console.log(sorted);
+
+      this.setState({
+        filteredEmp: sorted,
+        order: "asc",
+      });
+    }
+  };
+
+  sortByAge = () => {
+    const filtered = this.state.filteredEmp;
+    if (this.state.order === "asc") {
+      const sorted = filtered.sort((a, b) => (a.dob.age > b.dob.age ? 1 : -1));
+      //console.log(sorted);
+
+      this.setState({
+        filteredEmp: sorted,
+        order: "desc",
+      });
+    } else {
+      const sorted = filtered.sort((a, b) => (a.dob.age > b.dob.age ? -1 : 1));
+      //console.log(sorted);
 
       this.setState({
         filteredEmp: sorted,
@@ -99,6 +120,7 @@ class Container extends Component {
         <TableData
           results={this.state.filteredEmp}
           sortByName={this.sortByName}
+          sortByAge={this.sortByAge}
         />
       </div>
     );
