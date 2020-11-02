@@ -10,6 +10,8 @@ https://saikitjk.github.io/react-employee-directory
 
 ## Screenshot
 
+<img width="851" alt="Screen Shot 2020-11-02 at 3 04 39 PM" src="https://user-images.githubusercontent.com/34286313/97928913-cff28780-1d1c-11eb-8ec5-016e3d9e4ec7.png">
+
 ## Table of contents
 
 - [Technology](#Technology)
