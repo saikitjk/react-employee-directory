@@ -7,6 +7,7 @@ export default function searchBar(props) {
       <div class="input-group mb-3 searchBar">
         <input
           onChange={props.handleInputChange}
+          value={props.value}
           type="text"
           className="form-control"
           placeholder="name"
