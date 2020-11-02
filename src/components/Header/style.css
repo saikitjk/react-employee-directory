@@ -1,0 +1,15 @@
+.title {
+  font-size: larger;
+  background-color: skyblue;
+  padding-top: 8%;
+  padding-bottom: 2.5%;
+}
+
+.title h1 {
+  color: white;
+}
+
+.title hr {
+  width: 70%;
+  color: gray;
+}
