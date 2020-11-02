@@ -50,7 +50,7 @@ import Moment from "react-moment";
 import "./style.css";
 
 export default function dataTable(props) {
-  console.log("what is " + JSON.stringify(props));
+  //console.log("what is " + JSON.stringify(props));
   return (
     <>
       <table className="empTable">

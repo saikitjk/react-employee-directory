@@ -169,16 +169,14 @@ function Container() {
     });
   };
 
-  const employeeSearch = () => {
-    API.getUsers()
-      .then((res) =>
-        setEmpState({
-          filteredEmp: res.data.results,
-          employees: res.data.results,
-        })
-      )
-      .catch((err) => console.log(err));
-  };
+  API.getUsers()
+    .then((res) =>
+      setEmpState({
+        filteredEmp: res.data.results,
+        employees: res.data.results,
+      })
+    )
+    .catch((err) => console.log(err));
 
   const handleSearch = (event) => {
     event.preventDefault();
