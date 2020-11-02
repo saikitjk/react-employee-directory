@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import TableData from "../DataTable/dataTable";
-
 import SearchBar from "../SearchBar/searchBar";
 import "./style.css";
 import API from "../../utils/API";
@@ -72,7 +71,6 @@ class Container extends Component {
       .catch((err) => console.log(err));
   };
 
-  //when button search it's clicked
   handleSearch = (event) => {
     event.preventDefault();
     if (!this.state.search) {
@@ -80,7 +78,6 @@ class Container extends Component {
     }
     const { employees, search } = this.state;
 
-    //filters the object looking for the value that matches the value entered in the input box by the user  (search.this.state)
     const filteredEmp = employees.filter((employee) =>
       employee.name.first.toLowerCase().includes(search.toLowerCase())
     );
